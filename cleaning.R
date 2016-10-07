@@ -31,6 +31,8 @@ wordCorpus <- tm_map(wordCorpus, content_transformer(tolower))
 wordCorpus <- tm_map(wordCorpus, removeWords, stopwords("english"))
 wordCorpus <- tm_map(wordCorpus, stripWhitespace)
 
+gonewords <- tm_map(wordCorpus, removeWords, c("amp", "jaylive", "18885675635", "'re", "periscope"))
+
 library(RColorBrewer)
 pal <- brewer.pal(9,"YlGnBu")
 pal <- pal[-(1:4)]
