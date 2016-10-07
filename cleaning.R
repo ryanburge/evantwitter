@@ -40,4 +40,11 @@ wordcloud(words = wordCorpus, scale=c(5,0.1), max.words=100, random.order=FALSE,
 rot.per=0.35, use.r.layout=FALSE, colors=pal)
 
 
+dtm <- DocumentTermMatrix(wordCorpus,
+control=list(wordLengths=c(1, Inf),
+bounds=list(global=c(floor(length(wordCorpus)*0.005), Inf))))
+dtm2 <- as.matrix(dtm)
+frequency <- colSums(dtm2)
+frequency <- sort(frequency, decreasing=TRUE)
+head(frequency, 25)
 
