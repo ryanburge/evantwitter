@@ -11,4 +11,6 @@ count <- read.csv("count.csv", stringsAsFactors = FALSE)
 
 count <- filter(count, x >2500)
 
-ggplot(count, aes(x=reorder(X, x), y = x)) + geom_bar(stat="identity") + coord_flip() + ylab("Number of Times Used") + xlab("Word") + theme(legend.position="none")+ labs(title = "What Words Do Evangelicals Use the Most?")
+count$area.color <- c("one", "one", "one", "one", "one", "one" , "one", "one", "one", "one", "one", "one", "one", "one", "one", "two", "one", "one")
+
+ggplot(count, aes(x=reorder(X, x), y = x, fill=area.color)) + geom_bar(stat="identity") + coord_flip() + ylab("Number of Times Used") + xlab("Word") + theme(legend.position="none")+ labs(title = "What Words Do Evangelicals Use the Most?") +scale_fill_manual(values = c("gray", "red"))
