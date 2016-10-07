@@ -1,0 +1,14 @@
+dtm <- DocumentTermMatrix(wordCorpus,
+control=list(wordLengths=c(1, Inf),
+bounds=list(global=c(floor(length(wordCorpus)*0.005), Inf))))
+dtm2 <- as.matrix(dtm)
+frequency <- colSums(dtm2)
+frequency <- sort(frequency, decreasing=TRUE)
+head(frequency, 25)
+
+write.csv(frequency, "count.csv")
+count <- read.csv("count.csv", stringsAsFactors = FALSE)
+
+count <- filter(count, x >2500)
+
+ggplot(count, aes(x=reorder(X, x), y = x)) + geom_bar(stat="identity") + coord_flip() + ylab("Number of Times Used") + xlab("Word") + theme(legend.position="none")+ labs(title = "What Words Do Evangelicals Use the Most?")
