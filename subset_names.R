@@ -17,3 +17,26 @@ count  %>% arrange(count, desc(n))
 ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Obama'")
 length(unique(obama$screenName)) #27
 
+cruz<- tweets[ grep("Cruz", tweets$text), ]
+count <- count(cruz, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Cruz'")
+length(unique(cruz$screenName))  #23
+
+bernie<- tweets[ grep("Bernie", tweets$text), ]
+count <- count(bernie, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Bernie'")
+length(unique(bernie$screenName)) #13
+
+politics<- tweets[ grep("politics", tweets$text), ]
+count <- count(politics, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Politics'")
+length(unique(politics$screenName)) #27
+
+govt<- tweets[ grep("government", tweets$text), ]
+count <- count(govt, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Government'")
+length(unique(govt$screenName))  #25
