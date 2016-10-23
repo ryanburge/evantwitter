@@ -12,6 +12,8 @@ library(scales)
 library(reshape2)
 library(dplyr)
 library(RColorBrewer)
+
+
 count <- count(tweets, screenName)
 count  %>% arrange(count, desc(n))
 count <- filter(count, n >1)
