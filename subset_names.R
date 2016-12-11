@@ -40,3 +40,15 @@ count <- count(govt, screenName)
 count  %>% arrange(count, desc(n))
 ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Government'")
 length(unique(govt$screenName))  #25
+
+dem <- tweets[ grep("Democrat", tweets$text), ]
+count <- count(dem, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Democrat'")
+length(unique(dem$screenName))  #19
+
+rep <- tweets[ grep("Republican", tweets$text), ]
+count <- count(rep, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Democrat'")
+length(unique(rep$screenName))  #19
