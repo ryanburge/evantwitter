@@ -1,7 +1,6 @@
 tweets <- read.csv("D:/evantwitter/total.csv")
 dim(tweets)
-library(twitteR)
-library(ROAuth)
+
 library(tm)
 library(stringr)
 library(wordcloud)
@@ -15,13 +14,25 @@ library(RColorBrewer)
 library(ggstance)
 library(viridis)
 
+## I am just going to exclude the accounts of actual politicians 
 
+tweets <- filter(tweets, screenName != "realDonaldTrump")
+tweets <- filter(tweets, screenName != "tedcruz")
+tweets <- filter(tweets, screenName != "GovMikeHuckabee")
+
+
+### 
 count <- count(tweets, screenName)
 count  %>% arrange(count, desc(n))
 count <- filter(count, n >100)
 
 ## Which Users Tweet the Most
-ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip()
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_col() + coord_flip()
+
+
+## Stripping out the Tweets by Hours
+tweets$hours <- format(as.POSIXct(strptime(tweets$created,"%Y-%m-%d %H:%M:%S",tz="")) ,format = "%H:%M")
+tweets$created <-as.POSIXct(tweets$created)
 
 ## Total Distribution of Tweets Across Time
 ggplot(tweets, aes(created)) + geom_histogram(aes(fill = ..count..), bins = 270) + 
@@ -40,13 +51,9 @@ ggplot(data = tweets, aes(x = month(created, label = TRUE))) +
   geom_histogram(breaks = seq(0.5, 7.5, by =1), aes(fill = ..count..), stat = "count") +
   theme(legend.position = "none") +
   xlab("Day of the Week") + ylab("Number of tweets") + 
-  scale_fill_gradient(low = "midnightblue", high = "aquamarine4")
+  scale_fill_gradient(low = "thistle1", high = "red4")
 
-## Stripping out the Tweets by Hours
-tweets$hours <- format(as.POSIXct(strptime(tweets$created,"%Y-%m-%d %H:%M:%S",tz="")) ,format = "%H:%M")
-tweets$created <-as.POSIXct(tweets$created)
-
-
+## Cleaning 
 nohandles <- str_replace_all(tweets$text, "@\\w+", "")
 wordCorpus <- Corpus(VectorSource(nohandles))
 wordCorpus <- tm_map(wordCorpus, removePunctuation)
@@ -57,6 +64,8 @@ wordCorpus <- tm_map(wordCorpus, stemDocument)
 
 wordCorpus <- tm_map(wordCorpus, removeWords, c("amp", "jaylive", "18885675635", "'re", "periscope", "rt", "…", "1", "2", "4", "u", "3", "10", "7", "'s", "vom", "5"))
 
+
+## Old WordCloud 
 library(RColorBrewer)
 pal <- brewer.pal(9,"YlGnBu")
 pal <- pal[-(1:4)]
