@@ -19,7 +19,9 @@ count$X <- NULL
 count$x <- NULL
 
 ## I still wanted to dump some words that didn't make much sense
-count <- count[-c(22, 28, 39, 52, 89, 101, 102, 198, 199, 204),]
+
+
+#count <- count[-c(22, 28, 39, 52, 89, 101, 102, 198, 199, 204),]
 
 wordcloud2(data = count)
 
