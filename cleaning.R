@@ -19,6 +19,7 @@ library(viridis)
 tweets <- filter(tweets, screenName != "realDonaldTrump")
 tweets <- filter(tweets, screenName != "tedcruz")
 tweets <- filter(tweets, screenName != "GovMikeHuckabee")
+tweets <- filter(tweets, screenName != "GaryLBauer")
 
 
 ### 
