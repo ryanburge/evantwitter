@@ -36,7 +36,7 @@ tweets$hours <- format(as.POSIXct(strptime(tweets$created,"%Y-%m-%d %H:%M:%S",tz
 tweets$created <-as.POSIXct(tweets$created)
 
 ## Total Distribution of Tweets Across Time
-ggplot(tweets, aes(created)) + geom_histogram(aes(fill = ..count..), bins = 270) + 
+ggplot(tweets, aes(created)) + geom_histogram(aes(fill = ..count..), bins = 62) + 
   xlab("Date Tweeted") + ylab("Total Number of Tweets")
 
 
