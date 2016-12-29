@@ -15,6 +15,8 @@ fav <- a1
 rt$score <- rt$rtsum/rt$totaltweets
 fav$score <- fav$favsum/fav$totaltweets
 
+
+
 rt$label <- c("Retweets")
 fav$label <- c("Favorites")
 df <- rbind(fav, rt)
