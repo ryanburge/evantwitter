@@ -35,6 +35,14 @@ ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_col() + coord_flip()
 tweets$hours <- format(as.POSIXct(strptime(tweets$created,"%Y-%m-%d %H:%M:%S",tz="")) ,format = "%H:%M")
 tweets$created <-as.POSIXct(tweets$created)
 
+## Extracting the Year
+tweets$year <- format(as.Date(tweets$created, format="%Y/%m/%d"),"%Y")
+tweets %>% group_by(year) %>% summarise(total.count=n())
+
+tweets$month <- format(as.Date(tweets$created, format="%Y/%m/%d"),"%m")
+tweets %>% group_by(year, month) %>% summarise(total.count=n())
+
+
 ## Total Distribution of Tweets Across Time
 ggplot(tweets, aes(created)) + geom_histogram(aes(fill = ..count..), bins = 62) + 
   xlab("Date Tweeted") + ylab("Total Number of Tweets")
