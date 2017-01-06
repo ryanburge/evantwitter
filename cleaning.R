@@ -22,14 +22,11 @@ tweets <- filter(tweets, screenName != "GovMikeHuckabee")
 tweets <- filter(tweets, screenName != "GaryLBauer")
 
 
-### 
-count <- count(tweets, screenName)
-count  %>% arrange(count, desc(n))
-count <- filter(count, n >100)
 
 ## Which Users Tweet the Most
-ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_col() + coord_flip()
-
+count <- tweets %>% group_by(screenName) %>% summarise(total.tweets= n())
+ggplot(count %>%  filter(total.tweets >250), aes(x=reorder(screenName, total.tweets), y = total.tweets)) + 
+  geom_col() + coord_flip()
 
 ## Stripping out the Tweets by Hours
 tweets$hours <- format(as.POSIXct(strptime(tweets$created,"%Y-%m-%d %H:%M:%S",tz="")) ,format = "%H:%M")
@@ -37,11 +34,13 @@ tweets$created <-as.POSIXct(tweets$created)
 
 ## Extracting the Year
 tweets$year <- format(as.Date(tweets$created, format="%Y/%m/%d"),"%Y")
-tweets %>% group_by(year) %>% summarise(total.count=n())
-
 tweets$month <- format(as.Date(tweets$created, format="%Y/%m/%d"),"%m")
 tweets %>% group_by(year, month) %>% summarise(total.count=n())
 
+tweets %>% group_by(screenName) %>% summarise(total.count=n()) %>% arrange(desc(total.count))
+
+## This is a shortcut I just found
+tweets %>% count(screenName)
 
 ## Total Distribution of Tweets Across Time
 ggplot(tweets, aes(created)) + geom_histogram(aes(fill = ..count..), bins = 62) + 
