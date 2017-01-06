@@ -14,7 +14,7 @@ arrange(desc(tf_idf)) %>%
 mutate(word = factor(word, levels = rev(unique(word))))
 
 ## Just trying on Ted Haggard - This is a mess
-ggplot(tweets_words  %>% filter(screenName == "TedHaggard") %>% top_n(10), aes(x=word, y= tf_idf)) +
+ggplot(tweets_words  %>% filter(screenName == "realrobbell") %>% top_n(10), aes(x=word, y= tf_idf)) +
 geom_bar(aes(alpha = tf_idf),
 stat="identity",
 fill = "#4169E1") +
@@ -34,7 +34,7 @@ all_words <- all_words %>% bind_tf_idf(word, screenName, n)
 
 ## This is where it just gets terrible. Everyone is just tweeting about their own little niche. 
 all_words %>%
-select(-total) %>%
+group_by(screenName) %>% 
 arrange(desc(tf_idf))
 
 
