@@ -17,6 +17,12 @@ count  %>% arrange(count, desc(n))
 ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Obama'")
 length(unique(obama$screenName)) #24
 
+romney<- tweets[ grep("Romney", tweets$text), ]
+count <- count(romney, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Obama'")
+length(unique(romney$screenName)) #24
+
 cruz<- tweets[ grep("Cruz", tweets$text), ]
 count <- count(cruz, screenName)
 count  %>% arrange(count, desc(n))
@@ -50,5 +56,31 @@ length(unique(dem$screenName))  #16
 rep <- tweets[ grep("Republican", tweets$text), ]
 count <- count(rep, screenName)
 count  %>% arrange(count, desc(n))
-ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Democrat'")
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Republican'")
 length(unique(rep$screenName))  #17
+
+gay <- tweets[ grep("gay", tweets$text), ]
+count <- count(gay, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Gay'")
+length(unique(gay$screenName))  #22
+
+homo <- tweets[ grep("homosexual", tweets$text), ]
+count <- count(homo, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Gay'")
+length(unique(homo$screenName))  #9
+
+homo2 <- tweets[ grep("homosexuality", tweets$text), ]
+count <- count(hom2o, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Gay'")
+length(unique(homo2$screenName))  #6
+
+abortion <- tweets[ grep("abortion", tweets$text), ]
+count <- count(abortion, screenName)
+count  %>% arrange(count, desc(n))
+ggplot(count, aes(x=reorder(screenName, n), y = n)) + geom_bar(stat="identity") + coord_flip() + ggtitle("Number of Tweets Containing 'Homosexual'")
+length(unique(abortion$screenName))  #21
+
+
