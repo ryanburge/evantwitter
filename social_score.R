@@ -7,14 +7,16 @@ ggplot(a1 %>% filter(rtscore >=75), aes(x=reorder(screenName, rtscore), y = rtsc
 
 ggplot(a1 %>% filter(favscore >=75), aes(x=reorder(screenName, favscore), y = favscore)) + geom_col() + coord_flip() + ylab("Favorites per Tweet") + xlab("Screen Name")
 
+
+
 ## Plot with Point Size
-ggplot(a1,aes(x=rtscore,y=favscore)) +
-  ggtitle("Effectiveness of Evangelical Twitter Accounts",
+ggplot(follow2,aes(x=rtscore,y=favscore)) +
+  ggtitle("Effectiveness of Top 35 Evangelical Twitter Accounts",
           subtitle="Effectiveness Measured by the Mean Number of Retweets per Tweet\nand the Mean Number of Favoriteds Received per Tweet.\n
           Larger Point Size = More Followers") +
   xlab("Mean Number of Retweets (on a log10 scale)") +
   ylab("Mean Number of Favoriteds (on a log10 scale)") +
-  geom_point(color="red",size=0.0025*a1$followers,alpha=I(.55)) + geom_text_repel(aes(label=screenName),size=2.5,
+  geom_point(color="red",size=0.0000025*follow2$followers,alpha=I(.55)) + geom_text_repel(aes(label=screenName),size=2.5,
                                                                                           box.padding = unit(0.5, 'lines'),
                                                                                           point.padding = unit(1.6, 'lines'),
                                                                                           segment.color = "grey35",
