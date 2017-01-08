@@ -1,89 +1,89 @@
-Last Name,First Name,screenName,Position/Title,Followers
-Allen,Jason,Jasonkeithallen,Pastor and Seminary President,11100
-Anderson,David,AndersonSpeaks,Pastor and Author,49400
-Andrews,Andy,AndyAndrews,Author,191000
-Barton,David,DavidBartonWB,Company President and Author,28000
-Bell,Rob,Realrobbell,Author and Motivational Speaker,159000
-Bezet,Rick,rick_bezet,Pastor,23700
-Bolz-Weber,Nadia,Sarcasticluther,Pastor and Author,45800
-Cameron,Kirk,KirkCameron,Actor,61300
-Cathy,Dan,DanCathy,CEO,53800
-Champion,Joel,joechampion,Pastor,15900
-Chandler,Matt,MattChandler74,Pastor,383000
-Chapman,Gary,DrGaryChapman,Author,49900
-Comfort,Ray,Raycomfort,Pastor,53300
-De Jesus,Wilfredo,PastorChoco,Pastor and Author,13400
-DeYoung,Kevin,RevKevDeYoung,Pastor,91200
-Dobson,James,DrJamesCDobson,Author and Psychologist,39100
-Douthat,Ross,DouthatNYT,Author and Columnist,83200
-Downey,Roma,RealRomaDowney,TV Producer,140000
-Driscoll,Mark,PastorMark,Pastor,525000
-Edmondson,Ron,RonEdmondson,Pastor and Consultant,137000
-Evans,Tony,Drtonyevans,Pastor and Author,172000
-Falwell,Jerry,JerryJrFalwell,Liberty University President,19700
-Floyd,Ronnie,RonnieFloyd,Southern Baptist Convention President,25300
-Fry,Matt,mattfry,Pastor,16200
-Furtick,Steven,Stevenfurtick,Pastor,313000
-George,Willie,Willie_George,Pastor,32200
-Gerson,Michael,MJGerson,Op-Ed Columnist,16400
-Gibs,Joel,CoachJoeGibbs,Former Football Coach,5716
-Giglio,Louie,Louiegiglio,Pastor,557000
-Graham,Billy,BillyGraham,Evangelist,321000
-Graham,Franklin,Franklin_Graham,Evangelist,644000
-Groeschel,Craig,Craiggroeschel,Pastor,283000
-Hagee,John,PastorJohnHagee,Pastor and CEO,238000
-Haggard,Ted,TedHaggard,Pastor,938
-Ham,Ken,aigkenham,President and Founder of Answers in Genesis,40200
-Heisel,Doug,DougHeisel,Pastor,1964
-Hodges,Chris,Chris_Hodges,Pastor,77900
-Hybels,Billy,BillHybels,Pastor,267000
-Jakes,TD,TDJakesShow,Pastor and Author,21300
-Johnson,Brian,brianjohnsonM,Singer and Worship Leader,103000
-Junior,Michael,MichaelJrcomedy,Stand-Up Comedian,45200
-Keller,Timothy,timkellernyc,Pastor,278000
-LaHaye,Tim,Dr_Tim_LaHaye,Author and Minister,1152
-Land,Richard,rdland,Southern Evangelical Seminary President,2079
-Lucado,Max,MaxLucado,Pastor and Author,1290000
-MacArthur,John,Johnmacarthur,Pastor and Seminary President,133000
-MacDonald,James,Jamesmacdonald,Pastor,312000
-Mahaney,C.J.,CJMahaney,Pastor,53400
-Mason,Eric,Pastoremase,Pastor,32100
-McLaren,Brian,Brianmclaren,Pastor and Activist,48000
-Meyer,Joyce,JoyceMeyer,TV and Radio Show Host,4050000
-Mohler,Albert,Albertmohler,Pastor and Baptist Seminary President,128000
-Moore,Beth,BethMooreLPM,Ministry Founder and Author,724000
-Moore,Russell,Drmoore,Theologian,102000
-Munsey,Phil,Philmunsey,Chairman of Champion Network of Pastors,30000
-Noble,Perry,Perrynoble,Pastor and Author,170000
-Norris,Chuck,ChuckNorris,Martial Artist and Actor,106000
-Ortlund,Ray,rayortlund,Pastor,23700
-Osteen,Joel,JoelOsteen,Pastor,4680000
-Osteen,Victoria,VictoriaOsteen,Pastor,720000
-Parsons,Burk,BurkParsons,Pastor,33900
-Peavy,Jake,JakePeavy_22,Professional Baseball Player,123000
-Perkins,Tony,tperkins,Lobby Organization President,25100
-Piper,John,JohnPiper,Pastor and Author,860000
-Rainer,Thom,ThomRainer,Author and CEO of LifeWay Christian Resources,228000
-Ramsey,Dave,DaveRamsey,Radio Show Host and Author,753000
-Reed,Ralph,Ralphreed,Political Activist,11400
-Roberts Jr,Bob,bobrobertsjr,Pastor,12500
-Robertson,Willie,williebosshog,TV Personality,2420000
-Sekulow,Jay,JaySekulow,Attorney and Talk Show Host,64300
-Shirer,Priscilla,PriscillaShirer,Author,227000
-Smith,Judah,Judahsmith,Pastor,376000
-Stanley,Andy,AndyStanley,Pastor and Author,543000
-Stetzer,Ed,Edstetzer,Pastor and College Professor,197000
-Stine,Brad,Bradstine,Stand-Up Comedian,4319
-Stockstill,Larry,larrystockstill,Pastor,19800
-Strang,Stephen,sstrang,CEO of Charisma Media,4055
-Surratt,Greg,Gregsurratt,Pastor,32600
-Sweet,Michael,MichaelhSweet,Singer,67900
-Swindoll,Chuck,Chuckswindoll,Pastor,104000
-Trump,Donald,realDonaldTrump,Businessman,11200000
-Waltrip,Michael,MW55,Stock Car Racing Driver,386000
-Warren,Rick,RickWarren,Pastor,1840000
-Watson,Bubba,Bubbawatson,Professional Golfer,1720000
-Williams,Scott,ScottWilliams,Pastor,144000
-Wilson,Douglas,douglaswils,Pastor,23700
-Wilson,Pete,Pwilson,Pastor,153000
-,Lecrae,lecrae,Hip Hop Artist,1090000
+,screenName,rtsum,favsum,totaltweets,rtscore,favscore,replyrate,followers
+1,aigkenham,33321,89268,2280,14.61447368,39.15263158,0.400438596,40200
+2,albertmohler,11558,25668,566,20.4204947,45.34982332,0.348056537,128000
+3,AndersonSpeaks,34,113,28,1.214285714,4.035714286,0.428571429,49400
+4,AndyAndrews,9970,12453,1153,8.647007806,10.80052038,0.079791847,191000
+5,AndyStanley,12523,34735,200,62.615,173.675,0.265,543000
+6,BethMooreLPM,103416,650774,3125,33.09312,208.24768,0.8064,724000
+7,BillHybels,26371,25131,405,65.11358025,62.05185185,0.054320988,267000
+8,BillyGraham,11114,30608,68,163.4411765,450.1176471,0.191176471,321000
+9,bobrobertsjr,204,1239,264,0.772727273,4.693181818,0.488636364,12500
+10,bradstine,470,629,1505,0.312292359,0.417940199,0.019269103,4319
+11,brianjohnsonM,3924,13506,194,20.22680412,69.6185567,0.448453608,103000
+12,brianmclaren,85,202,43,1.976744186,4.697674419,0.046511628,48000
+13,bubbawatson,50224,202256,391,128.4501279,517.2787724,0.52685422,1720000
+14,BurkParsons,8289,16497,156,53.13461538,105.75,0.173076923,33900
+15,Chris_Hodges,91373,135596,2994,30.51870407,45.28924516,0.30761523,77900
+16,chucknorris,14686,21358,514,28.57198444,41.55252918,0.029182879,106000
+17,chuckswindoll,105339,137525,3200,32.9184375,42.9765625,0.005,104000
+18,CJMahaney,1953,3866,99,19.72727273,39.05050505,0.03030303,53400
+19,CoachJoeGibbs,978,1499,46,21.26086957,32.58695652,0.826086957,5716
+20,craiggroeschel,86197,131382,1740,49.53850575,75.50689655,0.668965517,283000
+21,dancathy,22450,18434,1574,14.26302414,11.7115629,0.416772554,53800
+22,DaveRamsey,91235,236401,861,105.9639954,274.5656214,0.231126597,753000
+23,DavidBartonWB,33351,15078,3176,10.50094458,4.747481108,0.257556675,28000
+24,DougHeisel,145,314,229,0.633187773,1.371179039,0.323144105,1964
+25,douglaswils,968,2069,201,4.815920398,10.29353234,0.348258706,23700
+26,DouthatNYT,25569,55613,816,31.33455882,68.15318627,0.520833333,83200
+27,Dr_Tim_LaHaye,916,1534,546,1.677655678,2.80952381,0.047619048,1152
+28,DrGaryChapman,5767,8814,483,11.93995859,18.2484472,0.066252588,49900
+29,DrJamesCDobson,47436,92243,3018,15.71769384,30.56428098,0.435387674,39100
+30,drmoore,10681,28146,467,22.87152034,60.26980728,0.687366167,102000
+31,drtonyevans,9502,20504,103,92.25242718,199.0679612,0.203883495,172000
+32,edstetzer,4653,15319,590,7.886440678,25.96440678,0.544067797,197000
+33,Franklin_Graham,256905,841544,867,296.3148789,970.638985,0.290657439,644000
+34,gregsurratt,2560,3531,2026,1.263573544,1.74284304,0.169299112,32600
+35,JakePeavy_22,31448,66439,536,58.67164179,123.9533582,0.587686567,123000
+36,jamesmacdonald,119690,203133,2716,44.06848306,74.79123711,0.1955081,312000
+37,jasonkeithallen,306,853,301,1.016611296,2.833887043,0.395348837,11100
+38,JaySekulow,62687,66811,2055,30.50462287,32.51143552,0.150851582,64300
+39,JerryJrFalwell,541,1108,16,33.8125,69.25,0.8125,19700
+40,joechampion,715,1840,707,1.011315417,2.602545969,0.455445545,15900
+41,JoelOsteen,6968672,10332956,3168,2199.707071,3261.665404,0.513888889,4680000
+42,johnmacarthur,9928,9691,796,12.47236181,12.17462312,0.067839196,133000
+43,JohnPiper,345315,695884,2736,126.2116228,254.3435673,0.027777778,860000
+44,JoyceMeyer,1223542,2275709,2888,423.6641274,787.9878809,0.05401662,4050000
+45,judahsmith,139799,181697,1771,78.9378882,102.5957086,0.738001129,376000
+46,KirkCameron,18584,28402,1893,9.817221342,15.00369783,0.01056524,61300
+47,larrystockstill,3941,6488,376,10.48138298,17.25531915,0.082446809,19800
+48,lecrae,177153,367776,460,385.1152174,799.5130435,0.432608696,1090000
+49,louiegiglio,67466,140538,1238,54.49596123,113.5201939,0.351373183,557000
+50,MattChandler74,18347,54410,551,33.29764065,98.7477314,0.646098004,383000
+51,mattfry,419,1263,757,0.553500661,1.668428005,0.43989432,16200
+52,MaxLucado,104398,228721,515,202.7145631,444.1184466,0.110679612,1290000
+53,michaelhsweet,740,3499,72,10.27777778,48.59722222,0.236111111,67900
+54,Michaeljrcomedy,481,2392,138,3.485507246,17.33333333,0.804347826,45200
+55,MJGerson,779,1128,59,13.20338983,19.11864407,0.13559322,16400
+56,MW55,2437,19305,254,9.594488189,76.00393701,0.625984252,386000
+57,PastorChoco,4848,8369,1100,4.407272727,7.608181818,0.087272727,13400
+58,pastoremase,4183,12872,618,6.768608414,20.82847896,0.569579288,32100
+59,PastorJohnHagee,24133,63450,490,49.25102041,129.4897959,0.624489796,238000
+60,PastorMark,143964,198840,1710,84.18947368,116.2807018,0.080116959,525000
+61,perrynoble,13147,59935,935,14.06096257,64.10160428,0.315508021,170000
+62,philmunsey,49,180,53,0.924528302,3.396226415,0.433962264,30000
+63,PriscillaShirer,4717,35899,454,10.38986784,79.07268722,0.59030837,227000
+64,pwilson,3814,10931,1356,2.812684366,8.06120944,0.804572271,153000
+65,ralphreed,1446,2267,317,4.561514196,7.151419558,0.552050473,11400
+66,raycomfort,37393,56366,2741,13.64210142,20.56402773,0.090477928,53300
+67,rayortlund,1046,3012,203,5.15270936,14.83743842,0.078817734,23700
+68,rdland,248,246,292,0.849315068,0.842465753,0.434931507,2079
+69,realrobbell,17085,25210,1259,13.57029388,20.02382844,0.071485306,159000
+70,RealRomaDowney,1144,4512,98,11.67346939,46.04081633,0.346938776,140000
+71,RevKevDeYoung,52379,92659,1190,44.01596639,77.86470588,0.13697479,91200
+72,rick_bezet,2947,8707,778,3.787917738,11.19151671,0.437017995,23700
+73,RickWarren,715082,590873,2200,325.0372727,268.5786364,0.114545455,1840000
+74,RonEdmondson,3739,7494,1041,3.591738713,7.198847262,0.168107589,137000
+75,ronniefloyd,1398,2917,299,4.675585284,9.755852843,0.622073579,25300
+76,Sarcasticluther,3508,15112,271,12.94464945,55.76383764,0.616236162,45800
+77,ScottWilliams,2566,5139,800,3.2075,6.42375,0.28125,144000
+78,sstrang,579,515,987,0.58662614,0.521783181,0.063829787,4055
+79,stevenfurtick,233236,407702,2907,80.23254214,140.248366,0.295493636,313000
+80,TDJakesShow,11259,26526,358,31.44972067,74.09497207,0.142458101,21300
+81,TedHaggard,68,45,272,0.25,0.165441176,0.113970588,938
+82,ThomRainer,2008,3878,247,8.129554656,15.70040486,0.24291498,228000
+83,timkellernyc,123644,254780,488,253.3688525,522.0901639,0.334016393,278000
+84,TimTebow,440314,1030895,476,925.0294118,2165.745798,0.537815126,3590000
+85,tperkins,14670,20243,547,26.8190128,37.00731261,0.402193784,25100
+86,VictoriaOsteen,571857,1003873,2950,193.8498305,340.2959322,0.423728814,720000
+87,Willie_George,1458,3369,67,21.76119403,50.28358209,0.462686567,32200
+88,williebosshog,10789,54936,108,99.89814815,508.6666667,0.62962963,2420000
