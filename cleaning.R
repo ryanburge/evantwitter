@@ -3,7 +3,7 @@ dim(tweets)
 
 library(tm)
 library(stringr)
-library(wordcloud)
+library(wordcloud2)
 library(syuzhet)
 library(lubridate)
 library(ggplot2)
