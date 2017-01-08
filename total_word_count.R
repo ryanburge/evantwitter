@@ -1,5 +1,22 @@
 ## Wnated to get a full word count for the entire dataset
 ## Had to truncate the analysis or my computer would blow up
+tweets <- read.csv("D:/evantwitter/total.csv")
+tweets <- filter(tweets, screenName != "realDonaldTrump")
+tweets <- filter(tweets, screenName != "tedcruz")
+tweets <- filter(tweets, screenName != "GovMikeHuckabee")
+tweets <- filter(tweets, screenName != "GaryLBauer")
+
+nohandles <- str_replace_all(tweets$text, "@\\w+", "")
+wordCorpus <- Corpus(VectorSource(nohandles))
+wordCorpus <- tm_map(wordCorpus, removePunctuation)
+wordCorpus <- tm_map(wordCorpus, content_transformer(tolower))
+wordCorpus <- tm_map(wordCorpus, removeWords, stopwords("english"))
+wordCorpus <- tm_map(wordCorpus, stripWhitespace)
+#wordCorpus <- tm_map(wordCorpus, stemDocument)
+
+wordCorpus <- tm_map(wordCorpus, removeWords, c("amp", "jaylive", "18885675635", "'re", "periscope", "rt", "…", "1", "2", "4", "u", "3", "10", "7", "'s", "vom", "5"))
+
+
 
 dtm <- DocumentTermMatrix(wordCorpus,
                           control=list(wordLengths=c(1, Inf),
@@ -20,9 +37,7 @@ count$x <- NULL
 
 ## I still wanted to dump some words that didn't make much sense
 
-
-#count <- count[-c(22, 28, 39, 52, 89, 101, 102, 198, 199, 204),]
-
+count <- count[-c(20, 28, 50, 88, 97, 104, 196, 198, 203),]
 wordcloud2(data = count)
 
 
