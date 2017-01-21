@@ -98,6 +98,15 @@ a1$rtscore <- a1$rtsum/a1$totaltweets
 a1$favscore <- a1$favsum/a1$totaltweets
 
 p1 <- read.csv("prosper1.csv")
+
+ggplot(p1, aes(x=reorder(screenName, followers), y=followers/1000, fill = type)) + geom_col() + 
+coord_flip() + xlab("Screen Name") + ylab("Number of Followers (in Thousands)") + 
+labs(fill="") + scale_fill_manual(values=c("darkblue", "darkolivegreen4")) + 
+theme(text=element_text(size=16, family="KerkisSans")) + 
+annotate("text", x = 1.5, y = 4000, label = "religioninpublic.blog", size = 5)
+
+
+
 a1$followers <- p1$followers
 
 
@@ -117,19 +126,20 @@ combine <- rbind(a1, a2)
 
 write.csv(combine, "538.csv")
 
-ggplot(combine,aes(x=rtscore,y=favscore, color=type)) +
+ggplot(p1,aes(x=rtscore,y=favscore, color=type)) +
   ggtitle("Who Has a Bigger Audience?",
           subtitle="Larger Point Size = More Followers") +
   xlab("Mean Number of Retweets (on a log10 scale)") +
   ylab("Mean Number of Favoriteds (on a log10 scale)") +
-  geom_point(color=combine$color,size=0.000005*combine$followers) + geom_text_repel(aes(label=screenName),size=2.5,
-                                                                                     box.padding = unit(0.5, 'lines'),
-                                                                                     point.padding = unit(1.6, 'lines'),
-                                                                                     segment.color = "grey35",
-                                                                                     segment.size = 0.5,
-                                                                                     arrow = arrow(length = unit(0.01, 'npc')),
-                                                                                     force = 1,
-                                                                                     max.iter = 3e3) +
-  scale_x_log10() + scale_y_log10() + theme_classic() + 
-  theme(panel.grid.major=element_line(colour="grey50",linetype=2)) + scale_color_manual(values=c("darkblue", "darkolivegreen4")) + 
-  guides(colour = guide_legend(override.aes = list(shape = 15)))
+  geom_point(color=p1$color,size=0.000005*p1$followers) + geom_text_repel(aes(label=screenName),size=2.5,
+                                                                          box.padding = unit(0.5, 'lines'),
+                                                                          point.padding = unit(1.6, 'lines'),
+                                                                          segment.color = "grey35",
+                                                                          segment.size = 0.5,
+                                                                          arrow = arrow(length = unit(0.01, 'npc')),
+                                                                          force = 1,
+                                                                          max.iter = 3e3) +
+  scale_x_log10() + scale_y_log10()  + scale_color_manual(values=c("darkblue", "darkolivegreen4")) + 
+  theme(text=element_text(size=16, family="KerkisSans")) + theme(legend.position="none") + 
+  annotate("text", x = 1145, y = .5, label = "religioninpublic.blog", size = 5)
+
