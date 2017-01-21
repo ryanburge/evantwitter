@@ -96,6 +96,7 @@ a1 <- prosper %>% group_by(screenName) %>% summarise(rtsum = sum(retweetCount), 
 
 a1$rtscore <- a1$rtsum/a1$totaltweets
 a1$favscore <- a1$favsum/a1$totaltweets
+
 p1 <- read.csv("prosper1.csv")
 a1$followers <- p1$followers
 
